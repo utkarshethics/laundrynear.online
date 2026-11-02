@@ -1,3 +1,4 @@
+import { LANGUAGES } from './languages.mjs';
 import { writeFileSync, mkdirSync, copyFileSync } from 'node:fs';
 import { resolve, join } from 'node:path';
 
@@ -58,93 +59,6 @@ const CITIES = [
     desc: 'Reliable laundry service near you in Chennai. Wash & fold and silk saree dry cleaning in Anna Nagar, OMR Tech Corridor, Velachery, Adyar, T Nagar. 24 hr express.',
     areas: ['OMR Tech Corridor', 'Anna Nagar', 'Velachery', 'Adyar', 'T Nagar', 'Besant Nagar', 'Thiruvanmiyur', 'Mylapore'],
     pincodes: '600040, 600096, 600042, 600020, 600017, 600090'
-  }
-];
-
-const LANGUAGES = [
-  {
-    code: 'hi',
-    lang: 'hi-IN',
-    name: 'हिन्दी',
-    metaTitle: 'कपड़े धोने व ड्राई क्लीन करने वाला मेरे पास | Doorstep Laundry Near Me',
-    metaDesc: 'घर बैठे कपड़े ड्राई क्लीनिंग, वॉश एंड फोल्ड और स्टीम आयरन सेवा। फ्री होम पिकअप और 24-48 घंटे में डिलीवरी। सिल्क साड़ी, कोट-पैंट और रोजमर्रा के कपड़े किलो के भाव पर।',
-    h1: 'लॉन्ड्री नियर मी — घर बैठे कपड़े धोने व ड्राई क्लीनिंग सेवा',
-    tagline: 'फ्री होम पिकअप और डिलीवरी के साथ पूरे शहर में 60 मिनट के अंदर पिकअप उपलब्ध',
-    voiceAnswer: 'LaundryNear.online आपके घर से कपड़े पिकअप करके प्रोफेशनल ड्राई क्लीनिंग, वॉश एंड फोल्ड (Wash & Fold), और स्टीम आयरन की सुविधा प्रदान करता है। Banarasi सिल्क साड़ी, कोट-पैंट, भारी कंबल और रोजमर्रा के कपड़े किलो के भाव (₹69/किलो) पर धोए जाते हैं।',
-    rateInfo: 'वॉश एंड फोल्ड ₹69/किलो, वॉश एंड स्टीम आयरन ₹99/किलो, सूट ड्राई क्लीन ₹249 से।',
-    whatsappCTA: 'नमस्ते LaundryNear.online, मुझे कपड़े ड्राई क्लीनिंग और लांड्री पिकअप बुक करना है।'
-  },
-  {
-    code: 'kn',
-    lang: 'kn-IN',
-    name: 'ಕನ್ನಡ',
-    metaTitle: 'ಮನೆ ಬಾಗಿಲಿಗೆ ಬರುವ ಲಾಂಡ್ರಿ ಮತ್ತು ಡ್ರೈ ಕ್ಲೀನಿಂಗ್ ಸೇವೆ | Laundry Near Me Bangalore',
-    metaDesc: 'ಮನೆ ಬಾಗಿಲಿಗೆ ಬಂದು ಬಟ್ಟೆ ಒಯ್ಯುವ ಡ್ರೈ ಕ್ಲೀನಿಂಗ್ ಮತ್ತು ಲಾಂಡ್ರಿ ಸೇವೆ. ಉಚಿತ ಪಿಕಪ್ ಮತ್ತು ಡೆಲಿವರಿ. ರೇಷ್ಮೆ ಸೀರೆ, ಸೂಟ್ ಮತ್ತು ಕಿಲೋ ಲಾಂಡ್ರಿ ₹69/ಕೆಜಿ.',
-    h1: 'ಲಾಂಡ್ರಿ ನಿಯರ್ ಮಿ — ಮನೆ ಬಾಗಿಲಿಗೆ ಬರುವ ಲಾಂಡ್ರಿ ಮತ್ತು ಡ್ರೈ ಕ್ಲೀನಿಂಗ್',
-    tagline: 'ಉಚಿತ ಹೋಮ್ ಪಿಕಪ್ ಮತ್ತು 24-48 ಗಂಟೆಗಳಲ್ಲಿ ಡೆಲಿವರಿ',
-    voiceAnswer: 'LaundryNear.online ನಿಮ್ಮ ಮನೆ ಬಾಗಿಲಿಗೆ ಬಂದು ಬಟ್ಟೆಗಳನ್ನು ಪಡೆದು ಪ್ರೊಫೆಷನಲ್ ಡ್ರೈ ಕ್ಲೀನಿಂಗ್, ವಾಶ್ & ಫೋಲ್ಡ್ ಮತ್ತು ಸ್ಟೀಮ್ ಐರನ್ ಸೇವೆ ನೀಡುತ್ತದೆ. ರೇಷ್ಮೆ ಸೀರೆಗಳು, ಸೂಟ್ ಮತ್ತು ದಿನಬಳಕೆಯ ಬಟ್ಟೆಗಳು ಕಿಲೋ ಲೆಕ್ಕದಲ್ಲಿ (₹69/ಕೆಜಿ) ಲಭ್ಯ.',
-    rateInfo: 'ವಾಶ್ & ಫೋಲ್ಡ್ ₹69/ಕೆಜಿ, ವಾಶ್ & ಸ್ಟೀಮ್ ಐರನ್ ₹99/ಕೆಜಿ, ಡ್ರೈ ಕ್ಲೀನಿಂಗ್ ₹149 ರಿಂದ.',
-    whatsappCTA: 'ನಮಸ್ಕಾರ LaundryNear.online, ನನಗೆ ಲಾಂಡ್ರಿ ಪಿಕಪ್ ಬುಕ್ ಮಾಡಬೇಕು.'
-  },
-  {
-    code: 'ta',
-    lang: 'ta-IN',
-    name: 'தமிழ்',
-    metaTitle: 'டோர்ஸ்டெப் சலவை மற்றும் டிரை கிளீனிங் சேவை | Laundry Near Me Chennai',
-    metaDesc: 'வீட்டுக்கே வந்து துணி எடுத்து சலவை செய்து தரும் லாண்ட்ரி சேவை. இலவச பிக்கப் & டெலிவரி. பட்டு புடவை, சூட் மற்றும் கிலோ லாண்ட்ரி ₹69/கிலோ.',
-    h1: 'லாண்ட்ரி நியர் மீ — வீட்டுக்கே வரும் டோர்ஸ்டெப் சலவை சேவை',
-    tagline: 'இலவச பிக்கப் மற்றும் 24-48 மணி நேரத்தில் துரித டெலிவரி',
-    voiceAnswer: 'LaundryNear.online உங்கள் வீட்டிற்கே வந்து துணிகளைப் பெற்று பிரீமியம் வாஷ் & போல்ட், ஸ்டீம் அயர்ன் மற்றும் டிரை கிளீனிங் செய்கிறது. கிலோ கணக்கில் துவைக்க ₹69/கிலோ முதல்.',
-    rateInfo: 'வாஷ் & போல்ட் ₹69/கிலோ, வாஷ் & ஸ்டீம் அயர்ன் ₹99/கிலோ, பட்டு புடவை டிரை கிளீன் ₹199.',
-    whatsappCTA: 'வணக்கம் LaundryNear.online, நான் துணி துவைக்க பிக்கப் புக் செய்ய விரும்புகிறேன்.'
-  },
-  {
-    code: 'te',
-    lang: 'te-IN',
-    name: 'తెలుగు',
-    metaTitle: 'డోర్‌స్టెప్ లాండ్రీ మరియు డ్రై క్లీనింగ్ సర్వీస్ | Laundry Near Me Hyderabad',
-    metaDesc: 'ఇంటి వద్దకే వచ్చి బట్టలు తీసుకెళ్లే లాండ్రీ మరియు డ్రై క్లీనింగ్ సేవలు. ఉచిత పికప్ & డెలివరీ. పట్టు చీరలు, సూట్లు మరియు కిలో లాండ్రీ ₹69/కిలో.',
-    h1: 'లాండ్రీ నియర్ మీ — డోర్‌స్టెప్ లాండ్రీ మరియు డ్రై క్లీనింగ్',
-    tagline: 'ఉచిత హోమ్ పికప్ మరియు 24-48 గంటల్లో డెలివరీ',
-    voiceAnswer: 'LaundryNear.online మీ ఇంటి వద్దకే వచ్చి బట్టలు తీసుకుని ప్రొఫెషనల్ డ్రై క్లీనింగ్, వాష్ & ఫోల్డ్, మరియు స్టీమ్ ఐరన్ చేస్తుంది. కిలో లాండ్రీ ₹69/కిలో నుంచి ప్రారంభం.',
-    rateInfo: 'వాష్ & ఫోల్డ్ ₹69/కిలో, వాష్ & స్టీమ్ ఐరన్ ₹99/కిలో, డ్రై క్లీనింగ్ ₹149 నుండి.',
-    whatsappCTA: 'నమస్కారం LaundryNear.online, నాకు లాండ్రీ పికప్ బుక్ చేయాలి.'
-  },
-  {
-    code: 'mr',
-    lang: 'mr-IN',
-    name: 'मराठी',
-    metaTitle: 'घरपोच कपडे धुलाई आणि ड्राय क्लीनिंग सेवा | Laundry Near Me Mumbai & Pune',
-    metaDesc: 'घरी येऊन कपडे नेण्याची आणि ड्राय क्लीन करून देण्याची सुविधा. मोफत पिकअप आणि डिलिव्हरी. पैठणी साडी, सूट आणि किलोने कपडे धुलाई ₹69/किलो.',
-    h1: 'लाँड्री नियर मी — घरपोच कपडे धुलाई व ड्राय क्लीनिंग सेवा',
-    tagline: 'मोफत होम पिकअप आणि 24 ते 48 तासांत खात्रीशीर डिलिव्हरी',
-    voiceAnswer: 'LaundryNear.online तुमच्या घरावरून कपडे घेऊन जाऊन व्यावसायिक ड्राय क्लीनिंग, वॉश अँड फोल्ड आणि स्टीम इस्त्रीची सेवा देते. पैठणी साडी, कोट-सूट आणि दैनंदिन कपडे किलोच्या भावात (₹69/किलो).',
-    rateInfo: 'वॉश अँड फोल्ड ₹69/किलो, वॉश अँड स्टीम इस्त्री ₹99/किलो, ड्राय क्लीनिंग ₹149 पासून.',
-    whatsappCTA: 'नमस्कार LaundryNear.online, मला कपडे धुलाईसाठी पिकअप बुक करायचा आहे.'
-  },
-  {
-    code: 'bn',
-    lang: 'bn-IN',
-    name: 'বাংলা',
-    metaTitle: 'বাড়ি থেকে কাপড় কাচা ও ড্রাই ক্লিনিং সার্ভিস | Laundry Near Me Kolkata',
-    metaDesc: 'বাড়ি থেকে কাপড় নিয়ে ড্রাই ক্লিনিং ও লন্ড্রি সার্ভিস। ফ্রি হোম পিকআপ ও ডেলিভারি। সিল্ক শাড়ি, স্যুট এবং কিলো দরে লন্ড্রি মাত্র ₹৬৯/কেজি।',
-    h1: 'লন্ড্রি নিয়ার মি — দোরগোড়ায় কাপড় কাচা ও ড্রাই ক্লিনিং সার্ভিস',
-    tagline: 'বিনামূল্যে হোম পিকআপ এবং ২৪-৪৮ ঘণ্টার মধ্যে দ্রুত ডেলিভারি',
-    voiceAnswer: 'LaundryNear.online আপনার বাড়ি থেকে পোশাক নিয়ে প্রফেশনাল ড্রাই ক্লিনিং, ওয়াশ অ্যান্ড ফোল্ড এবং স্টিম আয়রন করে পৌঁছে দেয়। প্রতিদিনের পোশাক মাত্র ₹৬৯/কেজি থেকে।',
-    rateInfo: 'ওয়াশ অ্যান্ড ফোল্ড ₹৬৯/কেজি, স্টিম আয়রন ₹৯৯/কেজি, ড্রাই ক্লিনিং ₹১৪৯ থেকে।',
-    whatsappCTA: 'নমস্কার LaundryNear.online, আমি লন্ড্রি পিকআপ বুক করতে চাই।'
-  },
-  {
-    code: 'gu',
-    lang: 'gu-IN',
-    name: 'ગુજરાતી',
-    metaTitle: 'ઘરે બેઠા કપડા ધોવા અને ડ્રાય ક્લીનિંગ સેવા | Laundry Near Me Ahmedabad',
-    metaDesc: 'ઘરેથી કપડા પિકઅપ અને ડ્રાય ક્લીનિંગ સેવા. મફત હોમ પિકઅપ અને ૨૪-૪૮ કલાકમાં ડિલિવરી. સાડી, સૂટ અને કિલો મુજબ લોન્ડ્રી માત્ર ₹૬૯/કિલો.',
-    h1: 'લોન્ડ્રી નિયર મી — ઘરે બેઠા કપડા ધોવા અને ડ્રાય ક્લીનિંગ સેવા',
-    tagline: 'ફ્રી હોમ પિકઅપ અને ૨૪-૪૮ કલાકમાં વિશ્વસનીય ડિલિવરી',
-    voiceAnswer: 'LaundryNear.online તમારા ઘરઆંગણેથી કપડા લઈને પ્રોફેશનલ ડ્રાય ક્લીનિંગ, વોશ એન્ડ ફોલ્ડ અને સ્ટીમ ઇસ્ત્રીની સેવા આપે છે. રોજિંદા કપડા કિલોના ભાવે (₹૬૯/કિલો) ઉપલબ્ધ.',
-    rateInfo: 'વોશ એન્ડ ફોલ્ડ ₹૬૯/કિલો, સ્ટીમ ઇસ્ત્રી ₹૯૯/કિલો, ડ્રાય ક્લીનિંગ ₹૧૪૯ થી.',
-    whatsappCTA: 'નમસ્તે LaundryNear.online, મારે લોન્ડ્રી પિકઅપ બુક કરવું છે.'
   }
 ];
 
@@ -751,7 +665,7 @@ function generateCityPages() {
   }
 }
 
-// 3. Generate Regional Voice Search Hubs
+// 3. Generate Regional Voice & Typed Search Hubs
 function generateLanguagePages() {
   for (const l of LANGUAGES) {
     const dir = join(ROOT, l.code);
@@ -759,13 +673,57 @@ function generateLanguagePages() {
 
     const schema = {
       "@context": "https://schema.org",
-      "@type": "DryCleaningOrLaundry",
-      "name": `LaundryNear.online - ${l.name}`,
-      "inLanguage": l.lang,
-      "url": `${ORIGIN}/${l.code}/`,
-      "telephone": "+91-7892240243",
-      "description": l.metaDesc
+      "@graph": [
+        {
+          "@type": "DryCleaningOrLaundry",
+          "@id": `${ORIGIN}/#business`,
+          "name": "LaundryNear.online",
+          "alternateName": `LaundryNear.online - ${l.name} (${l.englishName})`,
+          "inLanguage": l.lang,
+          "url": `${ORIGIN}/${l.code}/`,
+          "telephone": "+91-7892240243",
+          "priceRange": "₹₹",
+          "description": l.metaDesc,
+          "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "IN"
+          }
+        },
+        {
+          "@type": "WebPage",
+          "@id": `${ORIGIN}/${l.code}/#webpage`,
+          "url": `${ORIGIN}/${l.code}/`,
+          "name": l.metaTitle,
+          "description": l.metaDesc,
+          "inLanguage": l.code,
+          "keywords": `${l.textSearchKeywords}, doorstep laundry near me, dry cleaning rates`,
+          "speakable": {
+            "@type": "SpeakableSpecification",
+            "cssSelector": [".voice-h1", ".voice-answer", ".faq-answer", ".badge-pill"]
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "@id": `${ORIGIN}/${l.code}/#faq`,
+          "inLanguage": l.code,
+          "mainEntity": (l.typedSearches || []).map(t => ({
+            "@type": "Question",
+            "name": `${t.nativeQuery} (${t.romanQuery})`,
+            "alternateName": t.romanQuery,
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": t.answer
+            }
+          }))
+        }
+      ]
     };
+
+    const hreflangTags = [
+      `<link rel="alternate" hreflang="x-default" href="${ORIGIN}/">`,
+      `<link rel="alternate" hreflang="en-IN" href="${ORIGIN}/">`,
+      ...LANGUAGES.map(langItem => `<link rel="alternate" hreflang="${langItem.lang}" href="${ORIGIN}/${langItem.code}/">`)
+    ].join('\n  ');
 
     const html = `<!DOCTYPE html>
 <html lang="${l.code}">
@@ -774,14 +732,14 @@ function generateLanguagePages() {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>${l.metaTitle}</title>
   <meta name="description" content="${l.metaDesc}">
+  <meta name="keywords" content="${l.textSearchKeywords}">
   <link rel="canonical" href="${ORIGIN}/${l.code}/">
   <link rel="stylesheet" href="/css/style.css">
   
   <meta property="og:title" content="${l.metaTitle}">
   <meta property="og:description" content="${l.metaDesc}">
   <meta property="og:image" content="${ORIGIN}/assets/og-image.png">
-  <link rel="alternate" hreflang="${l.lang}" href="${ORIGIN}/${l.code}/">
-  <link rel="alternate" hreflang="x-default" href="${ORIGIN}/">
+  ${hreflangTags}
   
   <script type="application/ld+json">${JSON.stringify(schema, null, 2)}</script>
 </head>
@@ -791,16 +749,16 @@ function generateLanguagePages() {
   <section class="hero" style="padding: 3.5rem 1.25rem 2.5rem;">
     <div class="hero-inner">
       <div class="badge-pill">
-        <span>🗣️ ${l.name} Voice Search Friendly</span>
+        <span>🗣️ ${l.name} Voice & Typed Search Friendly</span>
         <span>•</span>
         <span>🚚 Free Pickup</span>
       </div>
-      <h1 class="hero-title" style="font-size: 2.3rem;">${l.h1}</h1>
+      <h1 class="hero-title voice-h1" style="font-size: 2.3rem;">${l.h1}</h1>
       <p class="hero-sub" style="font-size: 1.15rem; line-height: 1.7;">${l.tagline}</p>
       
       <div style="background: #ffffff; border-radius: 14px; padding: 1.75rem; border: 1px solid var(--border); box-shadow: var(--shadow); max-width: 750px; margin: 0 auto; text-align: left;">
         <h3 style="font-size: 1.15rem; color: var(--primary-dark); margin-bottom: 0.75rem;">💡 सीधी जानकारी (Direct Answers):</h3>
-        <p style="color: var(--text-muted); font-size: 1rem; line-height: 1.7; margin-bottom: 1rem;">
+        <p class="voice-answer" style="color: var(--text-muted); font-size: 1rem; line-height: 1.7; margin-bottom: 1rem;">
           ${l.voiceAnswer}
         </p>
         <div style="background: var(--primary-light); padding: 0.85rem 1.15rem; border-radius: 8px; font-weight: 700; color: var(--primary-dark); margin-bottom: 1.25rem;">
@@ -811,6 +769,34 @@ function generateLanguagePages() {
           <a href="https://wa.me/917892240243?text=${encodeURIComponent(l.whatsappCTA)}" class="btn-card" style="flex: 1; background: #25D366; text-align: center;" target="_blank" rel="noopener">व्हाट्सएप पर ऑर्डर करें</a>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- High-Intent Voice & Typed Search FAQ Section -->
+  <section class="container" style="padding: 2.5rem 1.25rem 4rem;">
+    <div class="section-head">
+      <div class="section-tag">🗣️ Voice Mic & Typed Search Intent</div>
+      <h2 class="section-title">अक्सर पूछे जाने वाले सवाल (Frequently Asked Questions)</h2>
+      <p class="section-desc">Google Voice Search और हिंग्लिश / रीजनल टाइप की गई आम सर्च के सीधे उत्तर:</p>
+    </div>
+
+    <div class="faq-wrap" style="max-width: 800px; margin: 0 auto;">
+      ${(l.typedSearches || []).map((item, idx) => `
+      <details class="faq-item" ${idx === 0 ? 'open' : ''} style="margin-bottom: 1rem; background: #ffffff; border: 1px solid var(--border); border-radius: 10px; overflow: hidden;">
+        <summary class="faq-question" style="padding: 1.15rem 1.25rem; font-weight: 700; cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
+          <span>${item.nativeQuery}</span>
+          <span style="font-size: 0.8rem; background: var(--primary-light); color: var(--primary-dark); padding: 0.2rem 0.5rem; border-radius: 4px; margin-left: 0.5rem; font-weight: 600;">${item.romanQuery}</span>
+        </summary>
+        <div class="faq-answer" style="padding: 1rem 1.25rem 1.25rem; color: var(--text-muted); line-height: 1.7; border-top: 1px solid var(--border); font-size: 0.98rem;">
+          ${item.answer}
+        </div>
+      </details>
+      `).join('')}
+    </div>
+
+    <div style="text-align: center; margin-top: 2.5rem;">
+      <a href="/pricing.html" class="btn-primary" style="display: inline-block; padding: 0.85rem 1.75rem; border-radius: 8px; font-weight: 700; text-decoration: none; margin-right: 0.75rem;">पूरी रेट लिस्ट देखें</a>
+      <a href="/book.html" class="btn-primary" style="display: inline-block; padding: 0.85rem 1.75rem; border-radius: 8px; font-weight: 700; text-decoration: none; background: #10b981;">60 मिनट में पिकअप बुक करें</a>
     </div>
   </section>
 
