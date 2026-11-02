@@ -1,0 +1,155 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": [
+        "Organization",
+        "Brand"
+      ],
+      "@id": "https://laundrynear.online/#organization",
+      "name": "LaundryNear.online",
+      "alternateName": [
+        "LaundryNear",
+        "Laundry Near Me India"
+      ],
+      "legalName": "LaundryNear Doorstep Laundry & Dry Cleaning Network",
+      "url": "https://laundrynear.online/",
+      "logo": {
+        "@type": "ImageObject",
+        "@id": "https://laundrynear.online/#logo",
+        "url": "https://laundrynear.online/assets/og-image.png",
+        "caption": "LaundryNear Brand Logo"
+      },
+      "image": {
+        "@id": "https://laundrynear.online/#logo"
+      },
+      "description": "India's tech-enabled doorstep laundry and eco dry cleaning network. Free home pickup in 60 minutes and 24-48 hr delivery across Bengaluru, Mumbai, Pune, and Delhi NCR.",
+      "telephone": "+91-7892240243",
+      "email": "support@laundrynear.online",
+      "sameAs": [
+        "https://wa.me/917892240243"
+      ],
+      "knowsAbout": [
+        "https://en.wikipedia.org/wiki/Laundry",
+        "https://www.wikidata.org/wiki/Q191948",
+        "https://en.wikipedia.org/wiki/Dry_cleaning",
+        "https://www.wikidata.org/wiki/Q1108481"
+      ],
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Bengaluru",
+          "sameAs": "https://www.wikidata.org/wiki/Q1355"
+        },
+        {
+          "@type": "City",
+          "name": "Mumbai",
+          "sameAs": "https://www.wikidata.org/wiki/Q1156"
+        },
+        {
+          "@type": "City",
+          "name": "Pune",
+          "sameAs": "https://www.wikidata.org/wiki/Q1538"
+        },
+        {
+          "@type": "City",
+          "name": "Hyderabad",
+          "sameAs": "https://www.wikidata.org/wiki/Q1361"
+        },
+        {
+          "@type": "City",
+          "name": "Chennai",
+          "sameAs": "https://www.wikidata.org/wiki/Q1352"
+        },
+        {
+          "@type": "City",
+          "name": "Delhi NCR",
+          "sameAs": "https://www.wikidata.org/wiki/Q1353"
+        },
+        {
+          "@type": "City",
+          "name": "Kolkata",
+          "sameAs": "https://www.wikidata.org/wiki/Q1348"
+        }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://laundrynear.online/#website",
+      "url": "https://laundrynear.online/",
+      "name": "LaundryNear.online",
+      "publisher": {
+        "@id": "https://laundrynear.online/#organization"
+      },
+      "inLanguage": [
+        "en-IN",
+        "hi-IN",
+        "kn-IN",
+        "ta-IN",
+        "te-IN",
+        "mr-IN",
+        "bn-IN",
+        "gu-IN"
+      ]
+    },
+    {
+      "@type": [
+        "LocalBusiness",
+        "DryCleaningOrLaundry"
+      ],
+      "@id": "https://laundrynear.online/#business",
+      "parentOrganization": {
+        "@id": "https://laundrynear.online/#organization"
+      },
+      "name": "LaundryNear Doorstep Dry Cleaning & Wash Services",
+      "url": "https://laundrynear.online/",
+      "telephone": "+91-7892240243",
+      "priceRange": "₹₹",
+      "currenciesAccepted": "INR",
+      "paymentAccepted": "Cash on Delivery, UPI, NetBanking",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Bengaluru",
+        "addressRegion": "Karnataka",
+        "addressCountry": "IN"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "@id": "https://laundrynear.online/#laundry-catalog",
+        "name": "Laundry & Dry Cleaning Rates",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Wash & Fold Laundry (Per Kg)",
+              "description": "Daily wear clothes washed in organic disinfectant detergent, tumble dried and folded."
+            },
+            "price": "69",
+            "priceCurrency": "INR"
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Wash & Steam Iron (Per Kg)",
+              "description": "Washed, tumble dried, and crisp high-pressure steam pressed."
+            },
+            "price": "99",
+            "priceCurrency": "INR"
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Eco Hydrocarbon Dry Cleaning (Per Piece)",
+              "description": "Gentle solvent cleaning for suits, blazers, and silk sarees."
+            },
+            "price": "149",
+            "priceCurrency": "INR"
+          }
+        ]
+      }
+    }
+  ]
+}

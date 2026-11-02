@@ -33,3 +33,9 @@
 2. **Individual Machine Batches**: Garments are NEVER mixed with another customer's clothes.
 3. **Zero Fabric Damage Guarantee**: Fabric warranty up to 10x cleaning value.
 4. **Instant WhatsApp Tracking**: Real-time status updates from pickup to sorting, washing, pressing, and dispatch.
+
+
+## Machine-Readable Knowledge Graph Entity
+- **JSON-LD Entity Graph:** https://laundrynear.online/entity.json
+- **Well-Known Entity URI:** https://laundrynear.online/.well-known/entity.json
+- **Ontology Specifications:** Schema.org linked with Wikidata concept entities for AI reasoning.

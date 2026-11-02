@@ -2,3 +2,8 @@ User-agent: *
 Allow: /
 
 Sitemap: https://laundrynear.online/sitemap.xml
+
+# Knowledge Graph & Entity Discovery for AI and Search Crawlers
+Allow: /entity.json
+Allow: /.well-known/entity.json
+Allow: /llms.txt
