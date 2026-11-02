@@ -1,0 +1,23 @@
+{
+  "name": "laundrynear.online",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Production SEO-first multi-lingual doorstep laundry & eco dry cleaning platform for laundrynear.online",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "deploy": "node scripts/build.mjs && wrangler pages deploy dist --project-name laundrynear-online",
+    "test": "node scripts/test-seo.mjs"
+  },
+  "keywords": [
+    "laundry near me",
+    "dry cleaning near me",
+    "doorstep laundry service",
+    "steam iron near me",
+    "laundry pickup bangalore",
+    "laundry pickup mumbai",
+    "laundry pickup delhi"
+  ],
+  "author": "STAGE-X",
+  "license": "UNLICENSED"
+}

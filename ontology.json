@@ -1,0 +1,132 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://laundrynear.online/#organization",
+      "name": "LaundryNear.online",
+      "legalName": "STAGE-X",
+      "url": "https://laundrynear.online/",
+      "logo": {
+        "@type": "ImageObject",
+        "@id": "https://laundrynear.online/#logo",
+        "url": "https://laundrynear.online/assets/og-image.png",
+        "caption": "LaundryNear.online Brand Logo"
+      },
+      "image": {
+        "@id": "https://laundrynear.online/#logo"
+      },
+      "description": "Tech-enabled doorstep laundry and eco dry cleaning service across top Indian metropolitan cities with free pickup and 24-48 hr delivery.",
+      "telephone": "+91-7892240243",
+      "email": "support@laundrynear.online",
+      "sameAs": [
+        "https://wa.me/917892240243"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "2nd Floor, No. 235, 13th Cross Road, Binnamangala, Indiranagar 2nd Stage",
+        "addressLocality": "Bengaluru",
+        "addressRegion": "Karnataka",
+        "postalCode": "560038",
+        "addressCountry": "IN"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://laundrynear.online/#website",
+      "url": "https://laundrynear.online/",
+      "name": "LaundryNear.online",
+      "publisher": {
+        "@id": "https://laundrynear.online/#organization"
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://laundrynear.online/?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "DryCleaningOrLaundry",
+      "@id": "https://laundrynear.online/#localbusiness",
+      "name": "LaundryNear.online - Doorstep Laundry & Dry Cleaning",
+      "url": "https://laundrynear.online/",
+      "telephone": "+91-7892240243",
+      "priceRange": "₹₹",
+      "image": "https://laundrynear.online/assets/og-image.png",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "2nd Floor, No. 235, 13th Cross Road, Binnamangala, Indiranagar 2nd Stage",
+        "addressLocality": "Bengaluru",
+        "addressRegion": "Karnataka",
+        "postalCode": "560038",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 12.9783,
+        "longitude": 77.6408
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+          "opens": "07:00",
+          "closes": "21:00"
+        }
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "14280",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Doorstep Laundry & Dry Cleaning Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Wash & Fold Laundry",
+              "description": "Per-kg daily wear laundry washed in organic detergent, tumble dried and folded."
+            },
+            "price": "69",
+            "priceCurrency": "INR"
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Wash & Steam Iron",
+              "description": "Per-kg laundry washed and finished with commercial high-pressure steam press."
+            },
+            "price": "99",
+            "priceCurrency": "INR"
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Eco Dry Cleaning",
+              "description": "Gentle hydrocarbon solvent dry cleaning for suits, silk sarees, and delicate garments."
+            },
+            "price": "149",
+            "priceCurrency": "INR"
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Steam Pressing Only",
+              "description": "Individual piece steam pressing for crisp formal and ethnic apparel."
+            },
+            "price": "29",
+            "priceCurrency": "INR"
+          }
+        ]
+      }
+    }
+  ]
+}

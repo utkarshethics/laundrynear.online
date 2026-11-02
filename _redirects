@@ -1,0 +1,17 @@
+# 301 Permanent Redirects for canonical domain consolidation
+https://www.laundrynear.online/* https://laundrynear.online/:splat 301
+/bangalore.html /bangalore 301
+/mumbai.html /mumbai 301
+/delhi-ncr.html /delhi-ncr 301
+/hyderabad.html /hyderabad 301
+/pune.html /pune 301
+/chennai.html /chennai 301
+/pricing.html /pricing 301
+/book.html /book 301
+/about.html /about 301
+/contact.html /contact 301
+/franchise.html /franchise 301
+/privacy.html /privacy 301
+/terms.html /terms 301
+/cancellation-refund.html /cancellation-refund 301
+/delivery-policy.html /delivery-policy 301
