@@ -55,7 +55,5 @@ npx wrangler pages deploy dist --project-name laundrynear-online
 
 ## 🏢 Business Identity & Operations
 - **Brand**: LaundryNear.online
-- **Legal Entity**: STAGE-X (Sole Proprietorship)
-- **Principal Operational Office**: 2nd Floor, No. 235, 13th Cross Road, Binnamangala, Indiranagar 2nd Stage, Bengaluru, Karnataka 560038
 - **Customer Care**: +91-7892240243 | support@laundrynear.online
 - **Direct WhatsApp**: https://wa.me/917892240243

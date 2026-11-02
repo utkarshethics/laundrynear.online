@@ -1,13 +1,10 @@
 # LaundryNear.online — Premium Doorstep Laundry & Eco Dry Cleaning Near You
 
 > India's premier tech-enabled doorstep laundry and eco dry cleaning service offering wash & fold, wash & steam iron, premium dry cleaning, shoe care, and curtain/linen sanitization with 100% free doorstep pickup and express delivery across major metropolitan areas.
-> LaundryNear.online is a consumer brand operated by STAGE-X, a verified sole proprietorship registered in Bengaluru, Karnataka, India.
 
-## Business Identity & Verified Entity
+## Business Identity & Verified Platform
 - **Brand / Domain**: LaundryNear.online (https://laundrynear.online)
 - **Primary Search Intent**: "laundry near me", "dry cleaners near me", "doorstep laundry pickup", "steam iron near me"
-- **Operating Entity**: STAGE-X
-- **Principal Operational Office**: 2nd Floor, No. 235, 13th Cross Road, Binnamangala, Indiranagar 2nd Stage, Bengaluru, Karnataka 560038, India
 - **Customer Care & Booking**: support@laundrynear.online | +91-7892240243
 - **Official WhatsApp Booking**: https://wa.me/917892240243
 - **Operating Hours**: Monday to Sunday, 07:00 AM – 09:00 PM IST

@@ -5,7 +5,6 @@
       "@type": "Organization",
       "@id": "https://laundrynear.online/#organization",
       "name": "LaundryNear.online",
-      "legalName": "STAGE-X",
       "url": "https://laundrynear.online/",
       "logo": {
         "@type": "ImageObject",
@@ -24,10 +23,6 @@
       ],
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "2nd Floor, No. 235, 13th Cross Road, Binnamangala, Indiranagar 2nd Stage",
-        "addressLocality": "Bengaluru",
-        "addressRegion": "Karnataka",
-        "postalCode": "560038",
         "addressCountry": "IN"
       }
     },
@@ -55,10 +50,6 @@
       "image": "https://laundrynear.online/assets/og-image.png",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "2nd Floor, No. 235, 13th Cross Road, Binnamangala, Indiranagar 2nd Stage",
-        "addressLocality": "Bengaluru",
-        "addressRegion": "Karnataka",
-        "postalCode": "560038",
         "addressCountry": "IN"
       },
       "geo": {

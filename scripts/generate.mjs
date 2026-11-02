@@ -195,9 +195,6 @@ function footerHtml() {
         <p style="font-size: 0.92rem; margin-bottom: 1rem; line-height: 1.6;">
           India's leading tech-enabled doorstep laundry and eco dry cleaning service. Transparent pricing by the kilo, digital scale weighing at your doorstep, fabric-safe organic solvents, and guaranteed 24-48 hr turnaround.
         </p>
-        <p style="font-size: 0.82rem; color: #64748b;">
-          A consumer business operated by <strong>STAGE-X</strong> (Sole Proprietorship). Principal Office: 2nd Floor, No. 235, 13th Cross Road, Indiranagar 2nd Stage, Bengaluru, Karnataka 560038.
-        </p>
       </div>
 
       <div class="footer-col">
@@ -314,10 +311,6 @@ function generateHomepage() {
         "image": `${ORIGIN}/assets/og-image.png`,
         "address": {
           "@type": "PostalAddress",
-          "streetAddress": "2nd Floor, No. 235, 13th Cross Road, Binnamangala, Indiranagar 2nd Stage",
-          "addressLocality": "Bengaluru",
-          "addressRegion": "Karnataka",
-          "postalCode": "560038",
           "addressCountry": "IN"
         },
         "aggregateRating": {
@@ -981,7 +974,7 @@ function generateOtherPages() {
   // Franchise Page
   const franchiseHtml = `${baseHead(
     'Franchise Opportunities | Partner with LaundryNear.online',
-    'Open a profitable tech-enabled laundry hub in your city. Low capex, high ROI, turnkey software, proven SOPs, and centralized marketing support by STAGE-X.',
+    'Open a profitable tech-enabled laundry hub in your city. Low capex, high ROI, turnkey software, proven SOPs, and centralized marketing support.',
     '/franchise.html'
   )}
   ${headerHtml('/franchise.html')}
@@ -1042,8 +1035,8 @@ function generateOtherPages() {
 
   // About Page
   const aboutHtml = `${baseHead(
-    'About Us | LaundryNear.online & STAGE-X Enterprise',
-    'Learn about LaundryNear.online: tech-enabled doorstep laundry and eco dry cleaning service by STAGE-X. Our mission, sustainability commitment, and leadership.',
+    'About Us | LaundryNear.online',
+    'Learn about LaundryNear.online: tech-enabled doorstep laundry and eco dry cleaning service. Our mission, sustainability commitment, and leadership.',
     '/about.html'
   )}
   ${headerHtml('/about.html')}
@@ -1066,10 +1059,9 @@ function generateOtherPages() {
         <li><strong>Eco-Friendly Green Chemistry</strong>: 100% free of carcinogenic perchloroethylene (PERC). We use gentle, dermatologist-tested European detergents.</li>
         <li><strong>Guaranteed Turnaround</strong>: Reliable 24–48 hour delivery cycles tracked via WhatsApp.</li>
       </ul>
-      <h3 style="color: var(--text-main); font-weight: 800; margin: 2rem 0 0.5rem;">Legal & Operational Entity</h3>
+      <h3 style="color: var(--text-main); font-weight: 800; margin: 2rem 0 0.5rem;">Customer Care & Support</h3>
       <p>
-        <strong>LaundryNear.online</strong> is an operating brand of <strong>STAGE-X</strong>, a registered sole proprietorship based in Bengaluru, Karnataka, India.<br>
-        <strong>Operational Headquarters:</strong> 2nd Floor, No. 235, 13th Cross Road, Binnamangala, Indiranagar 2nd Stage, Bengaluru, Karnataka 560038.<br>
+        <strong>LaundryNear.online</strong> provides premium, eco-friendly laundry and dry cleaning services across major metropolitan areas.<br>
         <strong>Customer Care:</strong> support@laundrynear.online | +91-7892240243
       </p>
     </div>
@@ -1082,8 +1074,8 @@ function generateOtherPages() {
 
   // Contact Page
   const contactHtml = `${baseHead(
-    'Contact Us | LaundryNear.online Customer Support & Bangalore HQ',
-    'Get in touch with LaundryNear.online. Customer support telephone +91-7892240243, WhatsApp booking, and Indiranagar Bengaluru operational headquarters.',
+    'Contact Us | LaundryNear.online Customer Support',
+    'Get in touch with LaundryNear.online. Customer support telephone +91-7892240243, WhatsApp booking, and express doorstep service.',
     '/contact.html'
   )}
   ${headerHtml('/contact.html')}
@@ -1111,10 +1103,8 @@ function generateOtherPages() {
           <a href="mailto:support@laundrynear.online" style="color: var(--primary); text-decoration: none;">support@laundrynear.online</a>
         </p>
         <p>
-          <strong>🏢 Principal Operational Office:</strong><br>
-          STAGE-X (LaundryNear.online)<br>
-          2nd Floor, No. 235, 13th Cross Road, Binnamangala,<br>
-          Indiranagar 2nd Stage, Bengaluru, Karnataka 560038, India
+          <strong>📍 Operating Coverage:</strong><br>
+          Doorstep pickup and delivery active across Bengaluru, Mumbai, Delhi NCR, Hyderabad, Pune, Chennai, and Kolkata.
         </p>
       </div>
 
@@ -1153,7 +1143,7 @@ function generateOtherPages() {
       <p style="color: #64748b; margin-bottom: 1.5rem;">Last Updated: November 2, 2026 | Compliant with DPDP Act 2023 (India)</p>
       
       <h3 style="color: var(--text-main); margin-top: 1.5rem; margin-bottom: 0.5rem;">1. Introduction & Data Controller</h3>
-      <p>This Privacy Policy explains how LaundryNear.online (a commercial unit of STAGE-X, Bengaluru) collects, processes, and protects your personal data when you use our website and logistics services.</p>
+      <p>This Privacy Policy explains how LaundryNear.online collects, processes, and protects your personal data when you use our website and logistics services.</p>
       
       <h3 style="color: var(--text-main); margin-top: 1.5rem; margin-bottom: 0.5rem;">2. Information We Collect</h3>
       <p>We collect essential operational data only: customer name, telephone number (for SMS/WhatsApp delivery updates), pickup and delivery address with geolocation markers, and digital order receipts.</p>
@@ -1162,7 +1152,7 @@ function generateOtherPages() {
       <p>All data is transmitted via TLS 1.3 encryption and hosted on secure Cloudflare edge infrastructure. We never sell, rent, or trade your personal data to third-party marketing companies.</p>
 
       <h3 style="color: var(--text-main); margin-top: 1.5rem; margin-bottom: 0.5rem;">4. Grievance Redressal</h3>
-      <p>Under the DPDP Act 2023, you have the right to request deletion or correction of your personal information. Contact our Grievance Officer at: support@laundrynear.online, STAGE-X, 2nd Floor, No. 235, 13th Cross Road, Indiranagar 2nd Stage, Bengaluru 560038.</p>
+      <p>Under the DPDP Act 2023, you have the right to request deletion or correction of your personal information. Contact our Grievance Officer at: support@laundrynear.online.</p>
     </div>
   </section>
   ${footerHtml()}
@@ -1172,7 +1162,7 @@ function generateOtherPages() {
   writeFileSync(join(ROOT, 'privacy.html'), privacyHtml);
 
   // Terms Page
-  const termsHtml = `${baseHead('Terms of Service | LaundryNear.online', 'Terms and conditions for doorstep laundry and dry cleaning by LaundryNear.online and STAGE-X.', '/terms.html')}
+  const termsHtml = `${baseHead('Terms of Service | LaundryNear.online', 'Terms and conditions for doorstep laundry and dry cleaning by LaundryNear.online.', '/terms.html')}
   ${headerHtml('/terms.html')}
   <section class="container">
     <div style="max-width: 800px; margin: 0 auto; background: #fff; padding: 2.5rem; border-radius: 14px; border: 1px solid var(--border); line-height: 1.7; font-size: 0.95rem; color: #334155;">
@@ -1180,7 +1170,7 @@ function generateOtherPages() {
       <p style="color: #64748b; margin-bottom: 1.5rem;">Last Updated: November 2, 2026</p>
       
       <h3 style="color: var(--text-main); margin-top: 1.5rem; margin-bottom: 0.5rem;">1. Service Agreement</h3>
-      <p>By scheduling a pickup on LaundryNear.online, you engage STAGE-X to perform laundry, steam pressing, and dry cleaning services under these terms.</p>
+      <p>By scheduling a pickup on LaundryNear.online, you engage LaundryNear.online to perform laundry, steam pressing, and dry cleaning services under these terms.</p>
       
       <h3 style="color: var(--text-main); margin-top: 1.5rem; margin-bottom: 0.5rem;">2. Weighing & Pricing</h3>
       <p>All weight-based orders (Wash & Fold, Wash & Iron) are weighed on calibrated digital scales at pickup in your presence. The weight confirmed on the digital scale is final.</p>
@@ -1189,7 +1179,7 @@ function generateOtherPages() {
       <p>We treat every garment with highest professional care following manufacturer wash labels. In the unlikely event of verified fabric damage attributable to our equipment, our liability is capped at up to 10 times the cleaning charge for that specific item.</p>
 
       <h3 style="color: var(--text-main); margin-top: 1.5rem; margin-bottom: 0.5rem;">4. Jurisdiction</h3>
-      <p>All disputes arising out of these terms shall be subject to the exclusive jurisdiction of the competent courts in Bengaluru, Karnataka, India.</p>
+      <p>All disputes arising out of these terms shall be subject to the exclusive jurisdiction of the competent courts in India.</p>
     </div>
   </section>
   ${footerHtml()}
