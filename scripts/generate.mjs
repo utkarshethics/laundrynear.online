@@ -38,7 +38,7 @@ const CITIES = [
     name: 'Hyderabad',
     state: 'Telangana',
     title: 'Laundry Near Me in Hyderabad | Hitec City & Gachibowli Doorstep Service',
-    desc: 'Fast doorstep laundry service near you in Hyderabad. Daily wash & fold from ₹69/kg in Hitec City, Gachibowli, Madhapur, Kondapur, Jubilee Hills. Free pickup.',
+    desc: 'Fast doorstep laundry service near you in Hyderabad. Daily wash & fold from ₹49/kg in Hitec City, Gachibowli, Madhapur, Kondapur, Jubilee Hills. Free pickup.',
     areas: ['Hitec City', 'Gachibowli', 'Madhapur', 'Kondapur', 'Jubilee Hills', 'Banjara Hills', 'Kukatpally', 'Financial District'],
     pincodes: '500081, 500032, 500084, 500033, 500034, 500072'
   },
@@ -59,6 +59,447 @@ const CITIES = [
     desc: 'Reliable laundry service near you in Chennai. Wash & fold and silk saree dry cleaning in Anna Nagar, OMR Tech Corridor, Velachery, Adyar, T Nagar. 24 hr express.',
     areas: ['OMR Tech Corridor', 'Anna Nagar', 'Velachery', 'Adyar', 'T Nagar', 'Besant Nagar', 'Thiruvanmiyur', 'Mylapore'],
     pincodes: '600040, 600096, 600042, 600020, 600017, 600090'
+  },
+  {
+    slug: "kolkata",
+    name: "Kolkata",
+    state: "West Bengal",
+    title: "Laundry Near Me in Kolkata | Doorstep Eco Dry Cleaning & Wash & Fold",
+    desc: "Fast doorstep laundry and dry cleaning near you in Kolkata. Free home pickup across Salt Lake, New Town, Park Street. Wash & fold from ₹49/kg with 24-48 hr express delivery.",
+    areas: ["Salt Lake","New Town","Park Street","Ballygunge","Alipore","Dum Dum","Behala"],
+    pincodes: "700091, 700156, 700016, 700019, 700027"
+  },
+  {
+    slug: "ahmedabad",
+    name: "Ahmedabad",
+    state: "Gujarat",
+    title: "Laundry Near Me in Ahmedabad | Doorstep Eco Dry Cleaning & Wash & Fold",
+    desc: "Fast doorstep laundry and dry cleaning near you in Ahmedabad. Free home pickup across Satellite, Bodakdev, Vastrapur. Wash & fold from ₹49/kg with 24-48 hr express delivery.",
+    areas: ["Satellite","Bodakdev","Vastrapur","Prahlad Nagar","Navrangpura","SG Highway"],
+    pincodes: "380015, 380054, 380051, 380009"
+  },
+  {
+    slug: "jaipur",
+    name: "Jaipur",
+    state: "Rajasthan",
+    title: "Laundry Near Me in Jaipur | Doorstep Eco Dry Cleaning & Wash & Fold",
+    desc: "Fast doorstep laundry and dry cleaning near you in Jaipur. Free home pickup across Malviya Nagar, Vaishali Nagar, C Scheme. Wash & fold from ₹49/kg with 24-48 hr express delivery.",
+    areas: ["Malviya Nagar","Vaishali Nagar","C Scheme","Mansarovar","Raja Park","Tonk Road"],
+    pincodes: "302017, 302021, 302001, 302020"
+  },
+  {
+    slug: "lucknow",
+    name: "Lucknow",
+    state: "Uttar Pradesh",
+    title: "Laundry Near Me in Lucknow | Doorstep Eco Dry Cleaning & Wash & Fold",
+    desc: "Fast doorstep laundry and dry cleaning near you in Lucknow. Free home pickup across Gomti Nagar, Hazratganj, Indira Nagar. Wash & fold from ₹49/kg with 24-48 hr express delivery.",
+    areas: ["Gomti Nagar","Hazratganj","Indira Nagar","Aliganj","Mahanagar","Vibhuti Khand"],
+    pincodes: "226010, 226001, 226016, 226024"
+  },
+  {
+    slug: "indore",
+    name: "Indore",
+    state: "Madhya Pradesh",
+    title: "Laundry Near Me in Indore | Doorstep Eco Dry Cleaning & Wash & Fold",
+    desc: "Fast doorstep laundry and dry cleaning near you in Indore. Free home pickup across Vijay Nagar, Palasia, Saket. Wash & fold from ₹49/kg with 24-48 hr express delivery.",
+    areas: ["Vijay Nagar","Palasia","Saket","AB Road","Bhawarkua","Rau"],
+    pincodes: "452010, 452001, 452018, 453331"
+  },
+  {
+    slug: "bhopal",
+    name: "Bhopal",
+    state: "Madhya Pradesh",
+    title: "Laundry Near Me in Bhopal | Doorstep Eco Dry Cleaning & Wash & Fold",
+    desc: "Fast doorstep laundry and dry cleaning near you in Bhopal. Free home pickup across Arera Colony, MP Nagar, Kolar Road. Wash & fold from ₹49/kg with 24-48 hr express delivery.",
+    areas: ["Arera Colony","MP Nagar","Kolar Road","Hoshangabad Road","Shahpura"],
+    pincodes: "462016, 462011, 462042, 462039"
+  },
+  {
+    slug: "coimbatore",
+    name: "Coimbatore",
+    state: "Tamil Nadu",
+    title: "Laundry Near Me in Coimbatore | Doorstep Eco Dry Cleaning & Wash & Fold",
+    desc: "Fast doorstep laundry and dry cleaning near you in Coimbatore. Free home pickup across RS Puram, Gandhipuram, Peelamedu. Wash & fold from ₹49/kg with 24-48 hr express delivery.",
+    areas: ["RS Puram","Gandhipuram","Peelamedu","Saibaba Colony","Saravanampatti"],
+    pincodes: "641002, 641012, 641004, 641035"
+  },
+  {
+    slug: "kochi",
+    name: "Kochi",
+    state: "Kerala",
+    title: "Laundry Near Me in Kochi | Doorstep Eco Dry Cleaning & Wash & Fold",
+    desc: "Fast doorstep laundry and dry cleaning near you in Kochi. Free home pickup across Kakkanad, Edappally, Panampilly Nagar. Wash & fold from ₹49/kg with 24-48 hr express delivery.",
+    areas: ["Kakkanad","Edappally","Panampilly Nagar","Marine Drive","Kaloor","Aluva"],
+    pincodes: "682030, 682024, 682036, 682017"
+  },
+  {
+    slug: "chandigarh",
+    name: "Chandigarh",
+    state: "Punjab",
+    title: "Laundry Near Me in Chandigarh | Doorstep Eco Dry Cleaning & Wash & Fold",
+    desc: "Fast doorstep laundry and dry cleaning near you in Chandigarh. Free home pickup across Sector 17, Sector 35, Sector 22. Wash & fold from ₹49/kg with 24-48 hr express delivery.",
+    areas: ["Sector 17","Sector 35","Sector 22","Sector 8","Mohali Phase 7","Panchkula Sector 20"],
+    pincodes: "160017, 160035, 160022, 160059"
+  },
+  {
+    slug: "patna",
+    name: "Patna",
+    state: "Bihar",
+    title: "Laundry Near Me in Patna | Doorstep Eco Dry Cleaning & Wash & Fold",
+    desc: "Fast doorstep laundry and dry cleaning near you in Patna. Free home pickup across Boring Road, Kankarbagh, Bailey Road. Wash & fold from ₹49/kg with 24-48 hr express delivery.",
+    areas: ["Boring Road","Kankarbagh","Bailey Road","Patliputra Colony","Rajendra Nagar"],
+    pincodes: "800001, 800020, 800014, 800013"
+  },
+  {
+    slug: "nagpur",
+    name: "Nagpur",
+    state: "Maharashtra",
+    title: "Laundry Near Me in Nagpur | Doorstep Eco Dry Cleaning & Wash & Fold",
+    desc: "Fast doorstep laundry and dry cleaning near you in Nagpur. Free home pickup across Dharampeth, Ramdaspeth, Wardha Road. Wash & fold from ₹49/kg with 24-48 hr express delivery.",
+    areas: ["Dharampeth","Ramdaspeth","Wardha Road","Civil Lines","Pratap Nagar"],
+    pincodes: "440010, 440015, 440001, 440022"
+  },
+  {
+    slug: "surat",
+    name: "Surat",
+    state: "Gujarat",
+    title: "Laundry Near Me in Surat | Doorstep Eco Dry Cleaning & Wash & Fold",
+    desc: "Fast doorstep laundry and dry cleaning near you in Surat. Free home pickup across Vesu, Adajan, Piplod. Wash & fold from ₹49/kg with 24-48 hr express delivery.",
+    areas: ["Vesu","Adajan","Piplod","Pal","Athwa Lines","Ghod Dod Road"],
+    pincodes: "395007, 395009, 395001, 395003"
+  },
+  {
+    slug: "visakhapatnam",
+    name: "Visakhapatnam",
+    state: "Andhra Pradesh",
+    title: "Laundry Near Me in Visakhapatnam | Doorstep Eco Dry Cleaning & Wash & Fold",
+    desc: "Fast doorstep laundry and dry cleaning near you in Visakhapatnam. Free home pickup across MVP Colony, Siripuram, Gajuwaka. Wash & fold from ₹49/kg with 24-48 hr express delivery.",
+    areas: ["MVP Colony","Siripuram","Gajuwaka","Madhurawada","Seethammadhara"],
+    pincodes: "530017, 530003, 530026, 530048"
+  },
+  {
+    slug: "bhubaneswar",
+    name: "Bhubaneswar",
+    state: "Odisha",
+    title: "Laundry Near Me in Bhubaneswar | Doorstep Eco Dry Cleaning & Wash & Fold",
+    desc: "Fast doorstep laundry and dry cleaning near you in Bhubaneswar. Free home pickup across Patia, Saheed Nagar, Jayadev Vihar. Wash & fold from ₹49/kg with 24-48 hr express delivery.",
+    areas: ["Patia","Saheed Nagar","Jayadev Vihar","Chandrasekharpur","Khandagiri"],
+    pincodes: "751024, 751007, 751013, 751016"
+  },
+  {
+    slug: "mysore",
+    name: "Mysore",
+    state: "Karnataka",
+    title: "Laundry Near Me in Mysore | Doorstep Eco Dry Cleaning & Wash & Fold",
+    desc: "Fast doorstep laundry and dry cleaning near you in Mysore. Free home pickup across Gokulam, Jayalakshmipuram, Kuvempunagar. Wash & fold from ₹49/kg with 24-48 hr express delivery.",
+    areas: ["Gokulam","Jayalakshmipuram","Kuvempunagar","Vijayanagar","Saraswathipuram"],
+    pincodes: "570002, 570012, 570023, 570017"
+  },
+  {
+    slug: "guwahati",
+    name: "Guwahati",
+    state: "Assam",
+    title: "Laundry Near Me in Guwahati | Doorstep Eco Dry Cleaning & Wash & Fold",
+    desc: "Fast doorstep laundry and dry cleaning near you in Guwahati. Free home pickup across GS Road, Dispur, Christian Basti. Wash & fold from ₹49/kg with 24-48 hr express delivery.",
+    areas: ["GS Road","Dispur","Christian Basti","Ulubari","Zoo Road","Beltola"],
+    pincodes: "781005, 781006, 781007, 781028"
+  },
+  {
+    slug: "jodhpur",
+    name: "Jodhpur",
+    state: "Rajasthan",
+    title: "Laundry Near Me in Jodhpur | Doorstep Eco Dry Cleaning & Wash & Fold",
+    desc: "Fast doorstep laundry and dry cleaning near you in Jodhpur. Free home pickup across Shastri Nagar, Ratanada, Sardarpura. Wash & fold from ₹49/kg with 24-48 hr express delivery.",
+    areas: ["Shastri Nagar","Ratanada","Sardarpura","Pal Road","Paota"],
+    pincodes: "342003, 342011, 342001, 342008"
+  },
+  {
+    slug: "vadodara",
+    name: "Vadodara",
+    state: "Gujarat",
+    title: "Laundry Near Me in Vadodara | Doorstep Eco Dry Cleaning & Wash & Fold",
+    desc: "Fast doorstep laundry and dry cleaning near you in Vadodara. Free home pickup across Alkapuri, Akota, Vasna Road. Wash & fold from ₹49/kg with 24-48 hr express delivery.",
+    areas: ["Alkapuri","Akota","Vasna Road","Gotri","Manjalpur","Karelibaug"],
+    pincodes: "390007, 390020, 390021, 390011"
+  },
+  {
+    slug: "ludhiana",
+    name: "Ludhiana",
+    state: "Punjab",
+    title: "Laundry Near Me in Ludhiana | Doorstep Eco Dry Cleaning & Wash & Fold",
+    desc: "Fast doorstep laundry and dry cleaning near you in Ludhiana. Free home pickup across Model Town, Sarabha Nagar, Civil Lines. Wash & fold from ₹49/kg with 24-48 hr express delivery.",
+    areas: ["Model Town","Sarabha Nagar","Civil Lines","BRS Nagar","Ferozepur Road"],
+    pincodes: "141002, 141001, 141012, 141008"
+  },
+  {
+    slug: "agra",
+    name: "Agra",
+    state: "Uttar Pradesh",
+    title: "Laundry Near Me in Agra | Doorstep Eco Dry Cleaning & Wash & Fold",
+    desc: "Fast doorstep laundry and dry cleaning near you in Agra. Free home pickup across Sanjay Place, Tajganj, Dayalbagh. Wash & fold from ₹49/kg with 24-48 hr express delivery.",
+    areas: ["Sanjay Place","Tajganj","Dayalbagh","Kamla Nagar","Fatehabad Road"],
+    pincodes: "282002, 282001, 282005, 282004"
+  },
+  {
+    slug: "nashik",
+    name: "Nashik",
+    state: "Maharashtra",
+    title: "Laundry Near Me in Nashik | Doorstep Eco Dry Cleaning & Wash & Fold",
+    desc: "Fast doorstep laundry and dry cleaning near you in Nashik. Free home pickup across College Road, Gangapur Road, Indira Nagar. Wash & fold from ₹49/kg with 24-48 hr express delivery.",
+    areas: ["College Road","Gangapur Road","Indira Nagar","Govind Nagar","Panchavati"],
+    pincodes: "422005, 422013, 422009, 422003"
+  },
+  {
+    slug: "ranchi",
+    name: "Ranchi",
+    state: "Jharkhand",
+    title: "Laundry Near Me in Ranchi | Doorstep Eco Dry Cleaning & Wash & Fold",
+    desc: "Fast doorstep laundry and dry cleaning near you in Ranchi. Free home pickup across Harmu, Kanke Road, Doranda. Wash & fold from ₹49/kg with 24-48 hr express delivery.",
+    areas: ["Harmu","Kanke Road","Doranda","Lalpur","Bariatu","Morabadi"],
+    pincodes: "834002, 834008, 834001, 834009"
+  },
+  {
+    slug: "meerut",
+    name: "Meerut",
+    state: "Uttar Pradesh",
+    title: "Laundry Near Me in Meerut | Doorstep Eco Dry Cleaning & Wash & Fold",
+    desc: "Fast doorstep laundry and dry cleaning near you in Meerut. Free home pickup across Shastri Nagar, Civil Lines, Ganga Nagar. Wash & fold from ₹49/kg with 24-48 hr express delivery.",
+    areas: ["Shastri Nagar","Civil Lines","Ganga Nagar","Modipuram","Sadar Bazar"],
+    pincodes: "250004, 250001, 250002, 250110"
+  },
+  {
+    slug: "rajkot",
+    name: "Rajkot",
+    state: "Gujarat",
+    title: "Laundry Near Me in Rajkot | Doorstep Eco Dry Cleaning & Wash & Fold",
+    desc: "Fast doorstep laundry and dry cleaning near you in Rajkot. Free home pickup across Kalawad Road, Yagnik Road, Amin Marg. Wash & fold from ₹49/kg with 24-48 hr express delivery.",
+    areas: ["Kalawad Road","Yagnik Road","Amin Marg","University Road","Nana Mava"],
+    pincodes: "360005, 360001, 360007, 360002"
+  },
+  {
+    slug: "varanasi",
+    name: "Varanasi",
+    state: "Uttar Pradesh",
+    title: "Laundry Near Me in Varanasi | Doorstep Eco Dry Cleaning & Wash & Fold",
+    desc: "Fast doorstep laundry and dry cleaning near you in Varanasi. Free home pickup across Sigra, Bhelupur, Lanka. Wash & fold from ₹49/kg with 24-48 hr express delivery.",
+    areas: ["Sigra","Bhelupur","Lanka","Orderly Bazar","Cantonment","Mahmoorganj"],
+    pincodes: "221010, 221005, 221002, 221001"
+  },
+  {
+    slug: "amritsar",
+    name: "Amritsar",
+    state: "Punjab",
+    title: "Laundry Near Me in Amritsar | Doorstep Eco Dry Cleaning & Wash & Fold",
+    desc: "Fast doorstep laundry and dry cleaning near you in Amritsar. Free home pickup across Ranjit Avenue, Mall Road, Civil Lines. Wash & fold from ₹49/kg with 24-48 hr express delivery.",
+    areas: ["Ranjit Avenue","Mall Road","Civil Lines","Green Avenue","Lawrence Road"],
+    pincodes: "143001, 143002, 143008, 143005"
+  },
+  {
+    slug: "navi-mumbai",
+    name: "Navi Mumbai",
+    state: "Maharashtra",
+    title: "Laundry Near Me in Navi Mumbai | Doorstep Eco Dry Cleaning & Wash & Fold",
+    desc: "Fast doorstep laundry and dry cleaning near you in Navi Mumbai. Free home pickup across Vashi, Nerul, Belapur. Wash & fold from ₹49/kg with 24-48 hr express delivery.",
+    areas: ["Vashi","Nerul","Belapur","Kharghar","Seawoods","Kopar Khairane"],
+    pincodes: "400703, 400706, 400614, 400710"
+  },
+  {
+    slug: "allahabad",
+    name: "Prayagraj",
+    state: "Uttar Pradesh",
+    title: "Laundry Near Me in Prayagraj | Doorstep Eco Dry Cleaning & Wash & Fold",
+    desc: "Fast doorstep laundry and dry cleaning near you in Prayagraj. Free home pickup across Civil Lines, Georgetown, Tagore Town. Wash & fold from ₹49/kg with 24-48 hr express delivery.",
+    areas: ["Civil Lines","Georgetown","Tagore Town","Ashok Nagar","Katra"],
+    pincodes: "211001, 211002, 211003, 211004"
+  },
+  {
+    slug: "gwalior",
+    name: "Gwalior",
+    state: "Madhya Pradesh",
+    title: "Laundry Near Me in Gwalior | Doorstep Eco Dry Cleaning & Wash & Fold",
+    desc: "Fast doorstep laundry and dry cleaning near you in Gwalior. Free home pickup across City Centre, Lashkar, Morar. Wash & fold from ₹49/kg with 24-48 hr express delivery.",
+    areas: ["City Centre","Lashkar","Morar","Thatipur","Jayendra Ganj"],
+    pincodes: "474011, 474001, 474006, 474009"
+  },
+  {
+    slug: "jabalpur",
+    name: "Jabalpur",
+    state: "Madhya Pradesh",
+    title: "Laundry Near Me in Jabalpur | Doorstep Eco Dry Cleaning & Wash & Fold",
+    desc: "Fast doorstep laundry and dry cleaning near you in Jabalpur. Free home pickup across Civil Lines, Napier Town, Wright Town. Wash & fold from ₹49/kg with 24-48 hr express delivery.",
+    areas: ["Civil Lines","Napier Town","Wright Town","Gorakhpur","Vijay Nagar"],
+    pincodes: "482001, 482002, 482003, 482004"
+  },
+  {
+    slug: "vijayawada",
+    name: "Vijayawada",
+    state: "Andhra Pradesh",
+    title: "Laundry Near Me in Vijayawada | Doorstep Eco Dry Cleaning & Wash & Fold",
+    desc: "Fast doorstep laundry and dry cleaning near you in Vijayawada. Free home pickup across Benz Circle, MG Road, Governorpet. Wash & fold from ₹49/kg with 24-48 hr express delivery.",
+    areas: ["Benz Circle","MG Road","Governorpet","Suryaraopet","Satyanarayanapuram"],
+    pincodes: "520010, 520002, 520003, 520011"
+  },
+  {
+    slug: "madurai",
+    name: "Madurai",
+    state: "Tamil Nadu",
+    title: "Laundry Near Me in Madurai | Doorstep Eco Dry Cleaning & Wash & Fold",
+    desc: "Fast doorstep laundry and dry cleaning near you in Madurai. Free home pickup across KK Nagar, Anna Nagar, Tallakulam. Wash & fold from ₹49/kg with 24-48 hr express delivery.",
+    areas: ["KK Nagar","Anna Nagar","Tallakulam","SS Colony","Simmakkal"],
+    pincodes: "625020, 625002, 625016, 625001"
+  },
+  {
+    slug: "raipur",
+    name: "Raipur",
+    state: "Chhattisgarh",
+    title: "Laundry Near Me in Raipur | Doorstep Eco Dry Cleaning & Wash & Fold",
+    desc: "Fast doorstep laundry and dry cleaning near you in Raipur. Free home pickup across Shankar Nagar, Pandri, Devendra Nagar. Wash & fold from ₹49/kg with 24-48 hr express delivery.",
+    areas: ["Shankar Nagar","Pandri","Devendra Nagar","Samta Colony","Telibandha"],
+    pincodes: "492007, 492004, 492001, 492006"
+  },
+  {
+    slug: "kota",
+    name: "Kota",
+    state: "Rajasthan",
+    title: "Laundry Near Me in Kota | Doorstep Eco Dry Cleaning & Wash & Fold",
+    desc: "Fast doorstep laundry and dry cleaning near you in Kota. Free home pickup across Talwandi, Vigyan Nagar, Mahaveer Nagar. Wash & fold from ₹49/kg with 24-48 hr express delivery.",
+    areas: ["Talwandi","Vigyan Nagar","Mahaveer Nagar","Dadabari","Kunhari"],
+    pincodes: "324005, 324009, 324008, 324002"
+  },
+  {
+    slug: "solapur",
+    name: "Solapur",
+    state: "Maharashtra",
+    title: "Laundry Near Me in Solapur | Doorstep Eco Dry Cleaning & Wash & Fold",
+    desc: "Fast doorstep laundry and dry cleaning near you in Solapur. Free home pickup across Saat Rasta, Jule Solapur, Hotgi Road. Wash & fold from ₹49/kg with 24-48 hr express delivery.",
+    areas: ["Saat Rasta","Jule Solapur","Hotgi Road","Civil Lines","Ashok Chowk"],
+    pincodes: "413001, 413003, 413004, 413005"
+  },
+  {
+    slug: "hubli",
+    name: "Hubli",
+    state: "Karnataka",
+    title: "Laundry Near Me in Hubli | Doorstep Eco Dry Cleaning & Wash & Fold",
+    desc: "Fast doorstep laundry and dry cleaning near you in Hubli. Free home pickup across Vidyanagar, Keshwapur, Gokul Road. Wash & fold from ₹49/kg with 24-48 hr express delivery.",
+    areas: ["Vidyanagar","Keshwapur","Gokul Road","Navanagar","Shirur Park"],
+    pincodes: "580021, 580023, 580030, 580025"
+  },
+  {
+    slug: "bareilly",
+    name: "Bareilly",
+    state: "Uttar Pradesh",
+    title: "Laundry Near Me in Bareilly | Doorstep Eco Dry Cleaning & Wash & Fold",
+    desc: "Fast doorstep laundry and dry cleaning near you in Bareilly. Free home pickup across Civil Lines, Rajendra Nagar, DD Puram. Wash & fold from ₹49/kg with 24-48 hr express delivery.",
+    areas: ["Civil Lines","Rajendra Nagar","DD Puram","Model Town","Rampur Garden"],
+    pincodes: "243001, 243122, 243005, 243006"
+  },
+  {
+    slug: "moradabad",
+    name: "Moradabad",
+    state: "Uttar Pradesh",
+    title: "Laundry Near Me in Moradabad | Doorstep Eco Dry Cleaning & Wash & Fold",
+    desc: "Fast doorstep laundry and dry cleaning near you in Moradabad. Free home pickup across Civil Lines, Ram Ganga Vihar, Delhi Road. Wash & fold from ₹49/kg with 24-48 hr express delivery.",
+    areas: ["Civil Lines","Ram Ganga Vihar","Delhi Road","Kanth Road","Mansi Vihar"],
+    pincodes: "244001, 244002, 244003, 244004"
+  },
+  {
+    slug: "aligarh",
+    name: "Aligarh",
+    state: "Uttar Pradesh",
+    title: "Laundry Near Me in Aligarh | Doorstep Eco Dry Cleaning & Wash & Fold",
+    desc: "Fast doorstep laundry and dry cleaning near you in Aligarh. Free home pickup across Civil Lines, Ramghat Road, Marris Road. Wash & fold from ₹49/kg with 24-48 hr express delivery.",
+    areas: ["Civil Lines","Ramghat Road","Marris Road","Dodhpur","Medical Colony"],
+    pincodes: "202001, 202002, 202003, 202004"
+  },
+  {
+    slug: "jalandhar",
+    name: "Jalandhar",
+    state: "Punjab",
+    title: "Laundry Near Me in Jalandhar | Doorstep Eco Dry Cleaning & Wash & Fold",
+    desc: "Fast doorstep laundry and dry cleaning near you in Jalandhar. Free home pickup across Model Town, Civil Lines, Cantt Road. Wash & fold from ₹49/kg with 24-48 hr express delivery.",
+    areas: ["Model Town","Civil Lines","Cantt Road","Urban Estate","J P Nagar"],
+    pincodes: "144001, 144003, 144005, 144002"
+  },
+  {
+    slug: "tiruchirappalli",
+    name: "Tiruchirappalli",
+    state: "Tamil Nadu",
+    title: "Laundry Near Me in Tiruchirappalli | Doorstep Eco Dry Cleaning & Wash & Fold",
+    desc: "Fast doorstep laundry and dry cleaning near you in Tiruchirappalli. Free home pickup across Thillai Nagar, Cantonment, K K Nagar. Wash & fold from ₹49/kg with 24-48 hr express delivery.",
+    areas: ["Thillai Nagar","Cantonment","K K Nagar","Srirangam","Woraiyur"],
+    pincodes: "620018, 620001, 620021, 620006"
+  },
+  {
+    slug: "salem",
+    name: "Salem",
+    state: "Tamil Nadu",
+    title: "Laundry Near Me in Salem | Doorstep Eco Dry Cleaning & Wash & Fold",
+    desc: "Fast doorstep laundry and dry cleaning near you in Salem. Free home pickup across Fairlands, Hasthampatti, Alagapuram. Wash & fold from ₹49/kg with 24-48 hr express delivery.",
+    areas: ["Fairlands","Hasthampatti","Alagapuram","Suramangalam","Ammapet"],
+    pincodes: "636016, 636007, 636004, 636005"
+  },
+  {
+    slug: "warangal",
+    name: "Warangal",
+    state: "Telangana",
+    title: "Laundry Near Me in Warangal | Doorstep Eco Dry Cleaning & Wash & Fold",
+    desc: "Fast doorstep laundry and dry cleaning near you in Warangal. Free home pickup across Hanamkonda, Kazipet, Subedari. Wash & fold from ₹49/kg with 24-48 hr express delivery.",
+    areas: ["Hanamkonda","Kazipet","Subedari","Nakkalagutta","Waddepally"],
+    pincodes: "506001, 506003, 506002, 506370"
+  },
+  {
+    slug: "thiruvananthapuram",
+    name: "Thiruvananthapuram",
+    state: "Kerala",
+    title: "Laundry Near Me in Thiruvananthapuram | Doorstep Eco Dry Cleaning & Wash & Fold",
+    desc: "Fast doorstep laundry and dry cleaning near you in Thiruvananthapuram. Free home pickup across Kowdiar, Vellayambalam, Pattom. Wash & fold from ₹49/kg with 24-48 hr express delivery.",
+    areas: ["Kowdiar","Vellayambalam","Pattom","Technopark","Sasthamangalam"],
+    pincodes: "695003, 695010, 695004, 695581"
+  },
+  {
+    slug: "dehradun",
+    name: "Dehradun",
+    state: "Uttarakhand",
+    title: "Laundry Near Me in Dehradun | Doorstep Eco Dry Cleaning & Wash & Fold",
+    desc: "Fast doorstep laundry and dry cleaning near you in Dehradun. Free home pickup across Rajpur Road, Dalanwala, Vasant Vihar. Wash & fold from ₹49/kg with 24-48 hr express delivery.",
+    areas: ["Rajpur Road","Dalanwala","Vasant Vihar","Ballupur","Jakhan"],
+    pincodes: "248001, 248009, 248006, 248003"
+  },
+  {
+    slug: "mangalore",
+    name: "Mangalore",
+    state: "Karnataka",
+    title: "Laundry Near Me in Mangalore | Doorstep Eco Dry Cleaning & Wash & Fold",
+    desc: "Fast doorstep laundry and dry cleaning near you in Mangalore. Free home pickup across Kodialbail, Kadri, Bejai. Wash & fold from ₹49/kg with 24-48 hr express delivery.",
+    areas: ["Kodialbail","Kadri","Bejai","Lalbagh","Pandeshwar","Bendoorwell"],
+    pincodes: "575003, 575002, 575004, 575001"
+  },
+  {
+    slug: "ghaziabad",
+    name: "Ghaziabad",
+    state: "Uttar Pradesh",
+    title: "Laundry Near Me in Ghaziabad | Doorstep Eco Dry Cleaning & Wash & Fold",
+    desc: "Fast doorstep laundry and dry cleaning near you in Ghaziabad. Free home pickup across Indirapuram, Vaishali, Vasundhara. Wash & fold from ₹49/kg with 24-48 hr express delivery.",
+    areas: ["Indirapuram","Vaishali","Vasundhara","Raj Nagar Extension","Kaushambi"],
+    pincodes: "201014, 201010, 201012, 201017"
+  },
+  {
+    slug: "faridabad",
+    name: "Faridabad",
+    state: "Haryana",
+    title: "Laundry Near Me in Faridabad | Doorstep Eco Dry Cleaning & Wash & Fold",
+    desc: "Fast doorstep laundry and dry cleaning near you in Faridabad. Free home pickup across Sector 15, Sector 14, Greenfield. Wash & fold from ₹49/kg with 24-48 hr express delivery.",
+    areas: ["Sector 15","Sector 14","Greenfield","Surajkund","NIT Faridabad"],
+    pincodes: "121007, 121001, 121010, 121009"
+  },
+  {
+    slug: "thane",
+    name: "Thane",
+    state: "Maharashtra",
+    title: "Laundry Near Me in Thane | Doorstep Eco Dry Cleaning & Wash & Fold",
+    desc: "Fast doorstep laundry and dry cleaning near you in Thane. Free home pickup across Ghodbunder Road, Majiwada, Vartak Nagar. Wash & fold from ₹49/kg with 24-48 hr express delivery.",
+    areas: ["Ghodbunder Road","Majiwada","Vartak Nagar","Naupada","Panchpakhadi"],
+    pincodes: "400607, 400601, 400606, 400602"
   }
 ];
 
@@ -114,7 +555,7 @@ function footerHtml() {
       <div class="footer-col">
         <h5>Our Services</h5>
         <ul class="footer-links">
-          <li><a href="/pricing.html#wash-fold">Wash & Fold (₹69/kg)</a></li>
+          <li><a href="/pricing.html#wash-fold">Wash & Fold (₹49/kg)</a></li>
           <li><a href="/pricing.html#wash-iron">Wash & Steam Iron (₹99/kg)</a></li>
           <li><a href="/pricing.html#dry-clean">Eco Dry Cleaning (₹149+)</a></li>
           <li><a href="/pricing.html#steam-press">Steam Press Only (₹29+)</a></li>
@@ -160,7 +601,7 @@ function footerHtml() {
   </footer>
 
   <div class="mobile-sticky-bar">
-    <a href="/book.html" class="btn-mobile-book">⚡ Book Pickup (₹69/kg)</a>
+    <a href="/book.html" class="btn-mobile-book">⚡ Book Pickup (₹49/kg)</a>
     <a href="https://wa.me/917892240243?text=Hi%20LaundryNear.online%2C%20I%20want%20to%20book%20a%20doorstep%20laundry%20pickup" class="btn-mobile-whatsapp" target="_blank" rel="noopener">💬 WhatsApp</a>
   </div>`;
 }
@@ -251,7 +692,7 @@ function generateHomepage() {
             "name": "What is the per kg price for laundry near me?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Wash & Fold is ₹69 per kg (minimum 3 kg). Wash & Steam Iron is ₹99 per kg. Individual steam press starts at ₹29 per piece, and delicate dry cleaning starts at ₹149 per piece."
+              "text": "Wash & Fold is ₹49 per kg (minimum 3 kg). Wash & Steam Iron is ₹99 per kg. Individual steam press starts at ₹29 per piece, and delicate dry cleaning starts at ₹149 per piece."
             }
           },
           {
@@ -276,8 +717,8 @@ function generateHomepage() {
   };
 
   const html = `${baseHead(
-    'Laundry Near Me | Doorstep Laundry & Eco Dry Cleaning ₹69/kg | Free Pickup',
-    'Find laundry and dry cleaning near you. 100% free doorstep pickup & 24h delivery across Bangalore, Mumbai, Delhi NCR, Hyderabad, Pune, Chennai. Wash & fold ₹69/kg. Book in 30 secs!',
+    'Laundry Near Me | Doorstep Laundry & Eco Dry Cleaning ₹49/kg | Free Pickup',
+    'Find laundry and dry cleaning near you. 100% free doorstep pickup & 24h delivery across Bangalore, Mumbai, Delhi NCR, Hyderabad, Pune, Chennai. Wash & fold ₹49/kg. Book in 30 secs!',
     '/',
     schema
   )}
@@ -351,7 +792,7 @@ function generateHomepage() {
         <span class="service-badge">Most Popular</span>
         <div class="card-icon">🧺</div>
         <h3 class="card-title">Wash & Fold Laundry</h3>
-        <div class="card-price">₹69 <span>/ kg</span></div>
+        <div class="card-price">₹49 <span>/ kg</span></div>
         <p class="card-desc">Ideal for daily casual wear, t-shirts, jeans, gym wear, nightwear, and undergarments.</p>
         <ul class="feature-list">
           <li>Organic germicidal detergents</li>
@@ -421,7 +862,7 @@ function generateHomepage() {
         <div>
           <div class="calc-item">
             <div class="calc-label">
-              <span>Wash & Fold Laundry (₹69/kg)</span>
+              <span>Wash & Fold Laundry (₹49/kg)</span>
               <span id="valWash" style="color: var(--primary); font-weight: 700;">4 kg</span>
             </div>
             <input type="range" id="calcWashKg" class="calc-range" min="0" max="25" value="4">
@@ -529,7 +970,7 @@ function generateHomepage() {
       <details class="faq-item">
         <summary class="faq-question">What is the rate per kg for daily laundry near me?</summary>
         <div class="faq-answer">
-          Our standard Wash & Fold laundry is ₹69 per kg (minimum order 3 kg). If you want high-pressure commercial steam pressing included, Wash & Steam Iron is ₹99 per kg. There are no hidden fees or delivery surcharges above ₹200.
+          Our standard Wash & Fold laundry is ₹49 per kg (minimum order 3 kg). If you want high-pressure commercial steam pressing included, Wash & Steam Iron is ₹99 per kg. There are no hidden fees or delivery surcharges above ₹200.
         </div>
       </details>
 
@@ -634,7 +1075,7 @@ function generateCityPages() {
       <div class="services-grid">
         <div class="service-card popular">
           <h3 class="card-title">Daily Wash & Fold</h3>
-          <div class="card-price">₹69 <span>/ kg</span></div>
+          <div class="card-price">₹49 <span>/ kg</span></div>
           <p class="card-desc">Daily wear laundry weighed in your presence in ${c.name}. Free home pickup & drop.</p>
           <a href="/book.html?city=${c.slug}&service=wash-fold" class="btn-card">Book in ${c.name}</a>
         </div>
@@ -814,8 +1255,8 @@ function generateLanguagePages() {
 function generateOtherPages() {
   // Pricing Page
   const pricingHtml = `${baseHead(
-    'Rate Card & Pricing | Doorstep Laundry ₹69/kg & Dry Cleaning Rates',
-    'Transparent rate card for LaundryNear.online. Wash & fold ₹69/kg, steam iron ₹99/kg, suits ₹299, silk sarees ₹199, shoes ₹249. No hidden charges, digital weighing.',
+    'Rate Card & Pricing | Doorstep Laundry ₹49/kg & Dry Cleaning Rates',
+    'Transparent rate card for LaundryNear.online. Wash & fold ₹49/kg, steam iron ₹99/kg, suits ₹299, silk sarees ₹199, shoes ₹249. No hidden charges, digital weighing.',
     '/pricing.html'
   )}
   ${headerHtml('/pricing.html')}
@@ -904,7 +1345,7 @@ function generateOtherPages() {
         <div style="margin-bottom: 1.25rem;">
           <label style="display: block; font-weight: 700; margin-bottom: 0.4rem;">Select Primary Service</label>
           <select class="search-input" style="width: 100%;" required>
-            <option value="wash-fold">Wash & Fold Laundry (₹69/kg)</option>
+            <option value="wash-fold">Wash & Fold Laundry (₹49/kg)</option>
             <option value="wash-iron">Wash & Steam Iron (₹99/kg)</option>
             <option value="dry-clean">Eco Dry Cleaning (Suits, Sarees)</option>
             <option value="shoe-spa">Shoe Spa & Cleaning (₹249/pr)</option>

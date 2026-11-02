@@ -13,24 +13,7 @@ rmSync(OUT, { recursive: true, force: true });
 mkdirSync(OUT, { recursive: true });
 
 const PUBLISH_DIRS = ['assets', 'css', 'js', 'hi', 'kn', 'ta', 'te', 'mr', 'bn', 'gu'];
-const PUBLISH_FILES = [
-  'index.html',
-  'pricing.html',
-  'book.html',
-  'franchise.html',
-  'about.html',
-  'contact.html',
-  'privacy.html',
-  'terms.html',
-  'cancellation-refund.html',
-  'delivery-policy.html',
-  '404.html',
-  'bangalore.html',
-  'mumbai.html',
-  'delhi-ncr.html',
-  'hyderabad.html',
-  'pune.html',
-  'chennai.html',
+const PUBLISH_STATIC = [
   'robots.txt',
   'sitemap.xml',
   'llms.txt',
@@ -47,11 +30,18 @@ for (const dir of PUBLISH_DIRS) {
   }
 }
 
-for (const file of PUBLISH_FILES) {
+for (const entry of readdirSync(ROOT)) {
+  if (entry.endsWith('.html')) {
+    cpSync(join(ROOT, entry), join(OUT, entry));
+    console.log(`  ✓ staged html: ${entry}`);
+  }
+}
+
+for (const file of PUBLISH_STATIC) {
   const from = join(ROOT, file);
   if (existsSync(from)) {
     cpSync(from, join(OUT, file));
-    console.log(`  ✓ staged file: ${file}`);
+    console.log(`  ✓ staged static: ${file}`);
   }
 }
 
